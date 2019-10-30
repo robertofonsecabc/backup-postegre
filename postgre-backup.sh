@@ -48,6 +48,6 @@ rm $BACKUP_DIR/$FILENAME;
 
 # Upload to google cloud
 echo " Upload to bucket" >>  $LOG_FILE;;
-$GSUTIL cp $BACKUP_DIR/$FILENAME.zip gs://$BUCKET_NAME/;
+$GSUTIL cp $BACKUP_DIR/$FILENAME.zip gs://$BUCKET_NAME/$(date '+%Y')/$(date '+%m')/;
 
 echo " Finished script " >>  $LOG_FILE;;
